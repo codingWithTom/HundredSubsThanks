@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+  var body: some View {
+    TabView {
+      AnimateableTexts()
+        .padding(.bottom)
+        .tabItem { Text("Animateable") }
+      OrderedSlideInTexts()
+        .padding(.bottom)
+        .tabItem { Text("Slide In") }
+      ScaleableTexts()
+        .padding(.bottom)
+        .tabItem { Text("Scaleable Texts") }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
